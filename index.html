@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Online Learning</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7ff;
+            color: #222;
+        }
+
+        header {
+            background: #142b63;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: #ffca45;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 90px 20px;
+            background: linear-gradient(120deg, #183b82, #557de0);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background: #ffca45;
+            color: #142b63;
+            padding: 13px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 55px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #142b63;
+            margin-bottom: 25px;
+            font-size: 30px;
+        }
+
+        .courses {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 260px;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #0001;
+        }
+
+        .card h3 {
+            color: #244b9a;
+            margin: 15px 0;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        .about {
+            background: white;
+            line-height: 1.8;
+        }
+
+        .contact {
+            background: #e4ebff;
+        }
+
+        input, textarea {
+            width: 90%;
+            max-width: 450px;
+            padding: 13px;
+            margin: 10px;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #142b63;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media(max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>EduLearn</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <h1>Welcome to EduLearn</h1>
+    <p>Learn New Skills and Build Your Bright Future</p>
+    <a href="#courses" class="btn">Explore Courses</a>
+</div>
+
+<section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+        EduLearn is an online learning platform that helps
+        students improve their knowledge and skills.
+        We provide quality education, easy learning
+        materials and a better learning experience.
+    </p>
+</section>
+
+<section id="courses">
+    <h2>Our Popular Courses</h2>
+
+    <div class="courses">
+
+        <div class="card">
+            <h1>💻</h1>
+            <h3>Web Development</h3>
+            <p>Learn HTML, CSS and JavaScript
+            to create amazing websites.</p>
+            <br>
+            <button class="btn" onclick="enroll('Web Development')">Enroll Now</button>
+        </div>
+
+        <div class="card">
+            <h1>🐍</h1>
+            <h3>Python Programming</h3>
+            <p>Learn programming and develop
+            your coding skills.</p>
+            <br>
+            <button class="btn" onclick="enroll('Python Programming')">Enroll Now</button>
+        </div>
+
+        <div class="card">
+            <h1>📊</h1>
+            <h3>Data Science</h3>
+            <p>Explore data analysis and
+            modern technology.</p>
+            <br>
+            <button class="btn" onclick="enroll('Data Science')">Enroll Now</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Have any questions? Contact us below.</p>
+
+    <form onsubmit="sendMessage(event)">
+        <input type="text" placeholder="Your Name" required>
+        <br>
+        <input type="email" placeholder="Your Email" required>
+        <br>
+        <textarea placeholder="Your Message" required></textarea>
+        <br>
+        <button class="btn" type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 EduLearn. All Rights Reserved.</p>
+    <p>Learn Today, Lead Tomorrow!</p>
+</footer>
+
+<script>
+    function enroll(course) {
+        alert("Thank you for choosing " + course + "!");
+    }
+
+    function sendMessage(event) {
+        event.preventDefault();
+        alert("Thank you! Your message has been received.");
+    }
+</script>
+
+</body>
+</html>
